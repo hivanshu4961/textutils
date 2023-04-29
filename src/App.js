@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import Navbar from './component/Navbar';
+ import Navbar from './component/Navbar';
 import './App.css';
 import Textarea from './component/Textarea'; 
  
@@ -23,7 +23,7 @@ function App() {
     })
     setTimeout(()=>{
       setAlert(null);
-    },1500);
+     },1500);
     
   } 
 
@@ -47,9 +47,9 @@ function App() {
     <Alert  Alert={alert}/>
     <div className='container my-2' style={{color: Mode==='dark' ? 'white' : 'black'}}>
     <Routes>
-          <Route exact path="/about" element={<Acordian />}>
+          <Route exact path="/about" element={<Acordian mode={Mode} />}>
           </Route>
-          <Route exact path="/home" element={<Textarea  showAlert={showAlert} />}>
+          <Route exact path="/home" element={<Textarea   mode={Mode}showAlert={showAlert} />}>
           </Route>
       </Routes>
     </div> 
